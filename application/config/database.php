@@ -1,21 +1,19 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) {exit('No direct script access allowed');
+}
 
-$active_group = 'default';
+$active_group  = 'default';
 $active_record = TRUE;
 
-if(ENVIRONMENT == 'production')
-{
+if (ENVIRONMENT == 'production') {
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
-}
-else
-{
+} else {
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = 'root';
-	$db['default']['database'] = 'inventory';
+	$db['default']['database'] = 'myownapi';
 }
 
 $db['default']['dbdriver'] = 'mysql';
